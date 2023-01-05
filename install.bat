@@ -1,5 +1,16 @@
 echo off
-title Broadcom Wireless Installer
+title [v.1 Beta : quynkk] - Broadcom Wireless Device Installer
+
+:checkadmin
+cls
+IF EXIST %SYSTEMROOT%\SYSTEM32\WDI\LOGFILES GOTO :RUN
+ECHO This program required administrator privileged to run. Please re-run this program with administrator privileged. & Echo: & Echo Exiting ...
+@TIMEOUT /T 10
+goto :QUIT
+:RUN
+goto menu
+:QUIT
+exit
 
 :menu
 cls
@@ -19,13 +30,23 @@ goto menu
 :yes
 echo.
 echo Install Wireless Module first ...
-pnputil /add-driver ./dependencies/W1820A1830/bcmwdidhdpcie.inf
+::echo DEBUG: Install Driver
+pnputil /add-driver ./dependencies/18x0/bcmwdidhdpcie.inf
+pnputil /add-driver ./dependencies/15x017x0/bcmwdidhdpcie.inf
 echo.
 ::DEBUG
 ::msg * /v Install Wireless Driver Successfully.
 echo Then install Bluetooth Module...
-pnputil /add-driver ./bluetooth/bcbtums.inf
+pnputil /add-driver ./dependencies/bluetooth/bcbtums.inf
 echo.
+goto success
+
+:success
+cls
+echo --------------------------------------------------------------
+echo               Broadcom Wireless Device Installer
+echo --------------------------------------------------------------
+color 27
 echo Install completed. Please restart your computer.
 ::msg * /v Install Broadcom Drivers Successfully. Restart your computer in 3 seconds.
 ::shutdown /r /t 3
@@ -33,5 +54,6 @@ pause
 
 :no
 echo Exiting ...
+exit /b 1
 
 ::echo Install completed. Please restart your system.
