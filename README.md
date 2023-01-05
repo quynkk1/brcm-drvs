@@ -1,5 +1,5 @@
 # Broadcom Wireless Driver for Windows (For Hackintosh-Users)
-For users who have dual-booting system (macOS and Windows), it's difficult to find driver for that hardwares, especially wireless. So I create this repository to support that users.
+For users who have dual-booting system (macOS and Windows), it's difficult to find correctly driver for that hardwares, especially wireless. So I create this repository to support that users.
 
 This repository contains drivers for supported model listed below:
 - Dell Wireless 1550 (BCM94352 - 1/2 PCIe)
