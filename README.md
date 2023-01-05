@@ -9,4 +9,4 @@ This repository contains drivers for supported model listed below:
 
 **How to install ?**
 
-Just click `install.bat` and follow instruction in application.
+Just click `install.bat` and follow instruction in application. Restart your computer when needed.
