@@ -1,4 +1,5 @@
-# Broadcom Wireless Driver for Windows (For Hackintosh-Users)
+# Broadcom Wireless Device Driver
+
 For users who have dual-booting system (macOS and Windows), it's difficult to find correctly driver for that hardwares, especially wireless. So I create this repository to support that users.
 
 This repository contains drivers for supported model listed below:
