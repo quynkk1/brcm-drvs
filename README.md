@@ -7,6 +7,7 @@ This repository contains drivers for supported model listed below:
 - Dell Wireless 1560 (BCM94352 - M.2)
 - Dell Wireless 1820A (BCM94350 - M.2)
 - Dell Wireless 1830 (BCM943602 - M.2)
+- ...
 
 **How to install ?**
 
